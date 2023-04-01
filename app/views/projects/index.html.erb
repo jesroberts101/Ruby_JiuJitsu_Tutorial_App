@@ -1,6 +1,14 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <span class="navbar-text">
+      <h2>JiujitsuTutorialReview.com</h2>
+    </span>
+  </div>
+</nav>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
+<h2>Reviews</h2>
 
 <table>
   <thead>
@@ -18,14 +26,17 @@
         <td><%= project.title %></td>
         <td><%= project.description %></td>
         <td><%= project.rating %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <div class="d-grid gap-2 d-md-block">
+        <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Show', project %></td></button>
+        <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Edit', edit_project_path(project) %></td></button>
+        <button type="button" class="btn btn-outline-danger"<td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td></button>
+        </div>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<button type="button" class="btn btn-outline-primary"<td><%= link_to 'Add A New Review', new_project_path %></td></button>
 
-<%= link_to 'New Project', new_project_path %>
