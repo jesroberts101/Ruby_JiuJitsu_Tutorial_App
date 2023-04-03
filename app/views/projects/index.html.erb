@@ -8,35 +8,33 @@
 
 <p id="notice"><%= notice %></p>
 
-<h2>Reviews</h2>
+<h2><center>Reviews</center></h2>
+<center><button type="button" class="btn btn-outline-primary"<td><%= link_to 'Add A New Review', new_project_path %></td></button></center>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Rating</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <body>
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= project.rating %></td>
 
-        <div class="d-grid gap-2 d-md-block">
-        <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Show', project %></td></button>
-        <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Edit', edit_project_path(project) %></td></button>
-        <button type="button" class="btn btn-outline-danger"<td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td></button>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-1">
+          <div class="col-md-4 col-md-5 mx-auto">
+            <h1 class="fw-light"td><%= project.title %></td></h1>
+            <p class="lead text-muted"td><%= project.description %></td></p>
+              <p>
+                <p>Rating: <td><%= project.rating %></td></p>
+                <div class="d-grid gap-1 d-md-block">
+                  <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Show', project %></td></button>
+                  <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Edit', edit_project_path(project) %></td></button>
+                  <button type="button" class="btn btn-outline-danger"<td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td></button>
+                </div>
+              </p>
+          </div>
         </div>
-      </tr>
     <% end %>
-  </tbody>
-</table>
 
 <br>
-<button type="button" class="btn btn-outline-primary"<td><%= link_to 'Add A New Review', new_project_path %></td></button>
-
+</body>
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
