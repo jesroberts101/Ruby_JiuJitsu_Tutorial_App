@@ -2,18 +2,15 @@
   <div class="container-fluid">
     <span class="navbar-text">
       <h2>JiujitsuTutorialReview.com</h2>
+      <button type="button" class="btn btn-outline-dark"<td><%= link_to 'Add A New Review', new_project_path %></td></button>
     </span>
   </div>
 </nav>
 
 <p id="notice"><%= notice %></p>
-
 <h2><center>Reviews</center></h2>
-<center><button type="button" class="btn btn-outline-primary"<td><%= link_to 'Add A New Review', new_project_path %></td></button></center>
-
   <body>
     <% @projects.each do |project| %>
-
       <section class="py-3 text-center container">
         <div class="row py-lg-1">
           <div class="col-md-4 col-md-5 mx-auto">
@@ -30,10 +27,12 @@
           </div>
         </div>
     <% end %>
-</body>
+  </body>
   <div class="container">
-    <p class="float-end mb-1">
+    <p class="float-end">
       <a href="#">Back to top</a>
     </p>
   </div>
+
+    
 
