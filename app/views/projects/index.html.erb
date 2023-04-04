@@ -4,7 +4,7 @@
       <h2>JiujitsuTutorialReview.com</h2>
       <div class="btn-group">
       <p>
-       <%= button_to 'Add A New Review', new_project_path, method: :get %>
+       <%= button_to 'Add A New Review', new_project_path, method: :get, class: "btn btn-success" %>
       </p>
     </div>
     
@@ -24,11 +24,11 @@
                 <p>
                   <p>Rating: <td><%= project.rating %></td></p>
                   <p>Published: <td><%= project.published %></td></p>
-                    <div class="btn-group">
+                    <div class="btn-group ">
                       <p>
-                        <%= button_to 'Show', project, method: :get %>
-                        <%= button_to 'Edit', edit_project_path(project), method: :get %>
-                        <%= button_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, method: :get %>
+                        <%= button_to 'Show', project, method: :get, class: "btn btn-sm btn-outline-primary" %>
+                        <%= button_to 'Edit', edit_project_path(project), method: :get, class: "btn btn-sm btn-outline-primary" %>
+                        <%= button_to 'Delete', project, method: :delete, class: "btn btn-sm btn-outline-danger", data: { confirm: 'Are you sure?' } %>
                       </p>
                     </div>
                   </p>
