@@ -2,8 +2,13 @@
   <div class="container-fluid">
     <span class="navbar-text">
       <h2>JiujitsuTutorialReview.com</h2>
-      <button type="button" class="btn btn-outline-dark"<td><%= link_to 'Add A New Review', new_project_path %></td></button>
-    </span>
+      <div class="btn-group">
+      <p>
+       <%= button_to 'Add A New Review', new_project_path, method: :get %>
+      </p>
+    </div>
+    
+      </span>
   </div>
 </nav>
 
@@ -11,28 +16,31 @@
 <h2><center>Reviews</center></h2>
   <body>
     <% @projects.each do |project| %>
-      <section class="py-3 text-center container">
-        <div class="row py-lg-1">
+      
+        <div class="col py-lg-1">
           <div class="col-md-4 col-md-5 mx-auto">
             <h1 class="fw-light"td><%= project.title %></td></h1>
-            <p class="lead text-muted"td><%= project.description %></td></p>
-              <p>
-                <p>Rating: <td><%= project.rating %></td></p>
-                <div class="d-grid gap-1 d-md-block">
-                  <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Show', project %></td></button>
-                  <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Edit', edit_project_path(project) %></td></button>
-                  <button type="button" class="btn btn-outline-danger"<td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td></button>
+              <p class="lead text-muted"td><%= project.description %></td></p>
+                <p>
+                  <p>Rating: <td><%= project.rating %></td></p>
+                  <p>Published: <td><%= project.published %></td></p>
+                    <div class="btn-group">
+                      <p>
+                        <%= button_to 'Show', project, method: :get %>
+                        <%= button_to 'Edit', edit_project_path(project), method: :get %>
+                        <%= button_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, method: :get %>
+                      </p>
+                    </div>
+                  </p>
                 </div>
-              </p>
-          </div>
-        </div>
+              </div>
     <% end %>
   </body>
-  <div class="container">
-    <p class="float-end">
-      <a href="#">Back to top</a>
-    </p>
-  </div>
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Back to top</a>
+      </p>
+    </div>
 
     
 
