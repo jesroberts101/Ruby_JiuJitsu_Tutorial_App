@@ -23,6 +23,7 @@
             <p class="lead text-muted"td><%= project.description %></td></p>
               <p>
                 <p>Rating: <td><%= project.rating %></td></p>
+                <p>Published: <td><%= project.published %></td></p>
                 <div class="btn-group">
                   <p>
                    <%= button_to 'Show', project, method: :get %>
@@ -35,11 +36,11 @@
         </div>
     <% end %>
   </body>
-  <div class="container">
-    <p class="float-end">
-      <a href="#">Back to top</a>
-    </p>
-  </div>
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Back to top</a>
+      </p>
+    </div>
 
     
 
