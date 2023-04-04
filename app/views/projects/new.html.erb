@@ -11,5 +11,7 @@
 
 <%= render 'form', project: @project %>
 
-
-<button type="button" class="btn btn-outline-primary"<td><%= link_to 'Back', projects_path %></td> </button>
+<div class="btn-group">
+      <p>
+        <%= button_to 'Back', projects_path, method: :get %>
+      </p>
