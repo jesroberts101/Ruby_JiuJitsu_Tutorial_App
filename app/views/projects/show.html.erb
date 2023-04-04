@@ -21,28 +21,32 @@
               <strong>Title:</strong>
               <%= @project.title %>
             </p>
-          </div>
-            
-          <div class="field">
+          </div>  
+        <div class="field">
             <p>
               <strong>Description:</strong>
               <%= @project.description %>
             </p>
-          </div>
-
+        </div>
           <div class="field1">
             <p>
               <strong>Rating:</strong>
               <%= @project.rating %>
             </p>
-          </div>
-              
-          <div class="actions">
-          <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Edit', edit_project_path(@project) %></td> </button>
-          <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Back', projects_path %></td> </button>
-          </div>
-          </div>
-        </p>
-      </div>
+          </div> 
+          <div class="field1">
+            <p>
+              <strong>Published:</strong>
+              <%= @project.published %>
+            </p>
+        </div>
+      </p>
     </div>
+  </div>
+    <div class="btn-group">
+      <p>
+        <%= button_to 'Edit', edit_project_path(@project), method: :get %>
+        <%= button_to 'Back', projects_path(@oproject), method: :get %>
+      </p>
+  </div>
 </body>
