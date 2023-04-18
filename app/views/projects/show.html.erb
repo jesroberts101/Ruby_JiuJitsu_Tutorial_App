@@ -20,7 +20,12 @@
               <strong>Title:</strong>
               <%= @project.title %>
             </p>
-          </div>  
+          </div> 
+          <div class="field1">
+            <p>
+              <image src="<%=(url_for(@project.image))%>">
+            </p>
+          </div>
         <div class="field">
             <p>
               <strong>Description:</strong>
@@ -38,7 +43,7 @@
               <strong>Published:</strong>
               <%= @project.published %>
             </p>
-        </div>
+          </div>
       </p>
     </div>
   </div>
