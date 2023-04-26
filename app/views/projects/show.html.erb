@@ -28,30 +28,30 @@
         <h1 class="fw-light"</h1>
           <p> 
           <div class="field">
-            <p>
+          <p class="fs-4">
               <strong>Title:</strong>
               <%= @project.title %>
             </p>
-          </div> 
-          <div class="field1">
-            <p>
-              <image src="<%=(url_for(@project.image))%>">
-            </p>
+            </div>
+          <div class="field">
+          <p class="fs-4">
+            <strong><image src="<%=(url_for(@project.image))%>"></strong>
+          </p>
           </div>
-        <div class="field">
-            <p>
-              <strong>Description:</strong>
-              <%= @project.description %>
-            </p>
+          <div class="field">
+          <p class="fs-4">
+            <strong>Description:</strong>
+            <%= @project.description %>
+          </p>
         </div>
-          <div class="field1">
-            <p>
+        <div class="field">
+          <p class="fs-4">
               <strong>Rating:</strong>
               <%= @project.rating %>
             </p>
           </div> 
-          <div class="field1">
-            <p>
+          <div class="field">
+          <p class="fs-4">
               <strong>Published:</strong>
               <%= @project.published %>
             </p>
