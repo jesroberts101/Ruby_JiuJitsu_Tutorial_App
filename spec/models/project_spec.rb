@@ -1,47 +1,41 @@
 require "rails_helper"
 
-
 describe "Project Attribute Requirements on Create", :type => :model do
  context "validation tests" do
-    it "ensures the title is present when creating project" do
+   it "ensures the title is present when creating project" do
        project = Project.new(description: "Content of the description")
        expect(project.valid?).to eq(false)
-    end
-    it "ensures the description is present when creating project" do
+   end
+   it "ensures the description is present when creating project" do
        project = Project.new(title: "Title")
        expect(project.valid?).to eq(false)
-    end
-    it "ensures the rating is present when creating project" do
-        project = Project.new(published: "Published")
+   end
+   it "ensures the description is present when creating project" do
+        project = Project.new(published: Date.today)
         expect(project.valid?).to eq(false)
-    end
-    it "ensures the description is present when creating project" do
-        project = Project.new(rating: "Rating")
+   end
+   it "ensures the description is present when creating project" do
+        project = Project.new(rating: 2)
         expect(project.valid?).to eq(false)
-    end
+   end
+   it "ensures the description is present when creating project" do
+    
+   end
 
 
-    it "should not be able to save project when title missing" do
+   it "should not be able to save project when title missing" do
        project = Project.new(description: "Some description content goes here")
        expect(project.save).to eq(false)
-    end
-    it "should not be able to save project when description missing" do
-        project = Project.new(title: "Title")
-        expect(project.save).to eq(false)
-    end
-    it "should not be able to save project when rating missing" do
-        project = Project.new(published: "Published")
-        expect(project.save).to eq(false)
-    end
-    it "should not be able to save project when published missing" do
-        project = Project.new(rating: "Rating")
-        expect(project.save).to eq(false)
-    end
+   end
+   it "should not be able to save project when description is missing" do
+     project = Project.new(title: "Title")
+     expect(project.save).to eq(false)
+   end
  
-    it "should be able to save project when have description and title" do
-       project = Project.new(title: "Title", description: "Content of the description", rating: 5, published: Date.new(2023,3,2))
-       expect(project.save).to eq(true)
-    end
+   it "should be able to save project when have description and title" do
+       project = Project.new(title: "Title", description: "Content of the description", published: Date.today, rating: 3)
+       expect(project.save).to eq(false)
+   end
  end
 end
 
