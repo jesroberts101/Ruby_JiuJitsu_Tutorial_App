@@ -2,7 +2,6 @@
   <div class="container-fluid">
     <span class="navbar-text">
       <h2>JiujitsuTutorialReview.com</h2>
-<<<<<<< HEAD
 </nav>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,54 +16,12 @@
     <div class="ml-auto">
     <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-=======
-      
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-      
-      <div class="btn-group text-end">
-      <p>
-       <%= button_to 'Add A New Review', new_project_path, method: :get, class: "btn btn-success" %>
-      </p>
->>>>>>> 153368659e5bda8fb74b39e93a13e26010815ec9
     </div>
   </div>
 </nav>
 
 <p id="notice"><%= notice %></p>
-<<<<<<< HEAD
 
-<h2><center>Reviews</center></h2>
-<center><button type="button" class="btn btn-outline-primary"<td><%= link_to 'Add A New Review', new_project_path %></td></button></center>
-
-  <body>
-    <% @projects.each do |project| %>
-
-      <section class="py-5 text-center container">
-        <div class="row py-lg-1">
-          <div class="col-md-4 col-md-5 mx-auto">
-            <h1 class="fw-light"td><%= project.title %></td></h1>
-            <p class="lead text-muted"td><%= project.description %></td></p>
-              <p>
-                <p>Rating: <td><%= project.rating %></td></p>
-                <div class="d-grid gap-1 d-md-block">
-                  <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Show', project %></td></button>
-                  <button type="button" class="btn btn-outline-primary"<td><%= link_to 'Edit', edit_project_path(project) %></td></button>
-                  <button type="button" class="btn btn-outline-danger"<td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td></button>
-                </div>
-              </p>
-          </div>
-        </div>
-    <% end %>
-
-<br>
-</body>
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-  </div>
-=======
 <h2><center>Reviews</center></h2>
   <body>
     <% @projects.each do |project| %>
@@ -79,17 +36,10 @@
                     <div class="btn-group ">
                       <p>
                         <%= button_to 'Show', project, method: :get, class: "btn btn-sm btn-outline-primary" %>
-<<<<<<< HEAD
                         <% if user_signed_in? %>
                         <%= button_to 'Edit', edit_project_path(project), method: :get, class: "btn btn-sm btn-outline-primary" %>
                         <%= button_to 'Delete', project, method: :delete, class: "btn btn-sm btn-outline-danger", data: { confirm: 'Are you sure?' } %>
                         <% end %>
-=======
-                      <% if user_signed_in? %>
-                        <%= button_to 'Edit', edit_project_path(project), method: :get, class: "btn btn-sm btn-outline-primary" %>
-                        <%= button_to 'Delete', project, method: :delete, class: "btn btn-sm btn-outline-danger", data: { confirm: 'Are you sure?' } %>
-                      <% end %>
->>>>>>> 153368659e5bda8fb74b39e93a13e26010815ec9
                         </p>
                     </div>
                   </p>
@@ -103,6 +53,3 @@
       </p>
     </div>
 
-    
-
->>>>>>> 153368659e5bda8fb74b39e93a13e26010815ec9
