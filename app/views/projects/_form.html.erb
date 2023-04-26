@@ -11,22 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+<body>
+  <section class="py-3 text-center container">
+    <div class="row py-lg-1">
+      <div class="col-md-4 col-md-5 mx-auto">
+        <h1 class="fw-light"td><%= project.title %></td></h1>
+        <p class="lead text-muted"td><%= project.description %></td></p>
+          <p>
+            
+          <div class="field">
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+          </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+          <div class="field">
+            <%= form.label :description %>
+            <%= form.text_area :description %>
+          </div>
 
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.text_field :rating %>
-  </div>
+          <div class="field">
+            <%= form.label :rating %>
+            <%= form.text_field :rating %>
+          </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+          <div class="field">
+            <%= form.label :published %>
+            <%= form.date_select :published %>
+          </div>
+
+          <div class="field">
+            <%= form.file_field :image %>
+          </div>
+
+          <div class="actions">
+            <%= button_to 'Submit Review', projects_path, method: :get, class: "btn btn-outline-primary" %>
+          </div>
+          </div>
+        </p>
+      </div>
+    </div>
+    
+</body>
+
 <% end %>
+

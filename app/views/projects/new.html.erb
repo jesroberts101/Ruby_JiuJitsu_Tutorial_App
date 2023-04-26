@@ -7,8 +7,11 @@
 </nav>
 
 
-<h1>New Review</h1>
+<h1><center>New Review<center></h1>
 
 <%= render 'form', project: @project %>
 
-<%= link_to 'Back', projects_path %>
+<div class="btn-group">
+      <p>
+        <%= button_to 'Back', projects_path, method: :get, class: "btn btn-outline-primary" %>
+      </p>

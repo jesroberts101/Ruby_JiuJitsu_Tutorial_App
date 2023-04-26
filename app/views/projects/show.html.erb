@@ -6,23 +6,52 @@
   </div>
 </nav>
 
-
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @project.rating %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<body>
+  <section class="py-3
+   text-center container"h2><center>Show</center></h2>
+    <div class="row py-lg-1">
+      <div class="col-md-4 col-md-5 mx-auto">
+        <h1 class="fw-light"</h1>
+          <p> 
+          <div class="field">
+            <p>
+              <strong>Title:</strong>
+              <%= @project.title %>
+            </p>
+          </div> 
+          <div class="field1">
+            <p>
+              <image src="<%=(url_for(@project.image))%>">
+            </p>
+          </div>
+        <div class="field">
+            <p>
+              <strong>Description:</strong>
+              <%= @project.description %>
+            </p>
+        </div>
+          <div class="field1">
+            <p>
+              <strong>Rating:</strong>
+              <%= @project.rating %>
+            </p>
+          </div> 
+          <div class="field1">
+            <p>
+              <strong>Published:</strong>
+              <%= @project.published %>
+            </p>
+          </div>
+      </p>
+    </div>
+  </div>
+    <div class="btn-group">
+      <p>
+        <%= button_to 'Edit', edit_project_path(@project), method: :get, class: "btn btn-outline-primary" %> 
+        
+        <%= button_to 'Back', projects_path(@oproject), method: :get, class: "btn btn-outline-primary" %>
+      </p>
+  </div>
+</body>
