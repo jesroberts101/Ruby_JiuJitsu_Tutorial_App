@@ -1,7 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, only: %i[ new edit create update destroy]
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 153368659e5bda8fb74b39e93a13e26010815ec9
   # GET /projects or /projects.json
   def index
     @projects = Project.all
