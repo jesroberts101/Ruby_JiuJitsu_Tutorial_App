@@ -3,6 +3,6 @@ class Project < ApplicationRecord
     validates :description, presence: true
     validates :rating, presence: true
     validates :published, presence: true
-    has_one_attached :image
     validates :image, presence: true
+    has_one_attached :image
 end
